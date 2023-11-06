@@ -1,31 +1,32 @@
-# validator_db_endpoint
+# Validator Indexing Database Endpoint
 
-## Introduce
+## Overview
 
-This is the endpoint to connect validators and indexing db of scraping subnet.
-Validators can access via this endpoint and can add meta info about their uploaded data of wasabi s3.
+This endpoint facilitates the connection between validators and the indexing database of the scraping subnet. Validators can interact with this endpoint to add metadata about their uploaded data to the Wasabi S3.
 
-There's one more function.
-That is to generate api_key for accessing to this endpoint.
+An additional feature of this endpoint is the generation of API keys for access.
 
-## Install environments.
+## Environment Setup
+
+To install the necessary environment, run the following command:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-And make `.env` file from `.env.example`.
+Next, create a `.env` file using the provided `.env.example` as a template.
 
-## Running app
+## Running the Application
 
-Please run this code on terminal.
+To start the application, execute the following command in your terminal:
+
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-## Generate api key.
+## API Key Generation
 
-Please run this code on terminal.
+To generate an API key, run the following command in your terminal:
 
 ```bash
 python api_key.py
